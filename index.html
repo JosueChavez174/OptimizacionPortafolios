@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimización de Portafolios - Bolivia</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Fijo con Logo de Imagen y Navegación -->
+    <header id="main-header">
+        <a href="index.html" class="header-logo">
+
+            <img src="img/logo.png" alt="Logo MatrixOpt"
+                onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
+            <span id="fallback-logo"
+                style="display:none; font-weight:700; color:#00b4d8; font-size:1.2rem;">MatrixOpt</span>
+
+            <div class="logo-text">
+                <span class="logo-title">
+                    <span class="logo-title"
+                        style="color:aliceblue;  -webkit-text-stroke: 0.1px #f0f0f0;">DESAFIO</span>
+                    GRADIENTE</span>
+                <span class="logo-subtitle">Laboratorio Numérico</span>
+            </div>
+        </a>
+        <nav>
+            <ul class="header-nav">
+                <li><a href="index.html" class="active">INICIO</a></li>
+                <li><a href="teorico.html">MODULO TEORICO</a></li>
+                <li><a href="boliviano.html">MODULO ECONOMICO BOLIVIANO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero-carousel-section">
+        <div id="projectCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+            <!-- Indicadores inferiores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <!-- Contenido de los Slides -->
+            <div class="carousel-inner">
+
+                <!-- Slide 1: Primera imagen (ej: img/bg-network.png) -->
+                <div class="carousel-item active">
+                    <div class="carousel-img-bg"
+                        style="background: linear-gradient(rgba(11,13,18,0.75), rgba(11,13,18,0.88)), url('img/car3.png') center/cover;">
+                    </div>
+                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                        <h2 class="carousel-title">PORTAFOLIOS <span class="highlight-text">ESTABLES</span></h2>
+                        <p class="carousel-desc">Optimización matemática y análisis de covarianza aplicada al contexto
+                            macroeconómico boliviano ($n \ge 4$).</p>
+                        <div class="carousel-btn-group">
+                            <a href="teorico.html" class="btn-custom-outline">VER DOCUMENTO</a>
+                            <a href="boliviano.html" class="btn-custom-solid">ESTUDIO MACROECONÓMICO</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Segunda imagen (ej: img/bg-macro-bolivia.jpg) -->
+                <div class="carousel-item">
+                    <div class="carousel-img-bg"
+                        style="background: linear-gradient(rgba(11,13,18,0.75), rgba(11,13,18,0.88)), url('img/car2.png') center/cover;">
+                    </div>
+                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                        <h2 class="carousel-title">MÉTODO DEL <span class="highlight-text">GRADIENTE</span></h2>
+                        <p class="carousel-desc">Evaluación del número de condición $\kappa(A)$ y convergencia iterativa
+                            frente a escenarios de alta volatilidad.</p>
+                        <div class="carousel-btn-group">
+                            <a href="teorico.html#metodo-gradiente" class="btn-custom-outline">VER ALGORITMO</a>
+                            <a href="qa.html" class="btn-custom-solid">ARTÍCULOS Y RECURSOS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Tercera imagen (ej: img/bg-finance-curves.jpg) -->
+                <div class="carousel-item">
+                    <div class="carousel-img-bg"
+                        style="background: linear-gradient(rgba(11,13,18,0.75), rgba(11,13,18,0.88)), url('img/car1.jpg') center/cover;">
+                    </div>
+                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                        <h2 class="carousel-title">FACTORES DE <span class="highlight-text">RIESGO</span></h2>
+                        <p class="carousel-desc">Simulación numérica y mitigación de errores de truncamiento en
+                            plataformas de computación digital.</p>
+                        <div class="carousel-btn-group">
+                            <a href="boliviano.html" class="btn-custom-outline">VER SIMULADOR</a>
+                            <a href="qa.html" class="btn-custom-solid">REVISAR BIBLIOGRAFÍA</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Controles de navegación lateral -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+
+        </div>
+    </section>
+    <!-- Contenido Ampliado para Generar Scroll -->
+    <main>
+
+
+
+        <div class="welcome-box">
+            <h1>Factorización de Matrices y Estabilidad Numérica</h1>
+            <p>Proyecto de Optimización de Portafolios en el Contexto Macroeconómico Boliviano ($n \ge 4$).</p>
+            <p style="margin-top:s 1.5rem; font-size: 0.9rem; color: #00b4d8;">Desplaza la página hacia abajo para
+                comprobar la transición dinámica del efecto blur en el encabezado.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Sección 1: Introducción al Proyecto</h2>
+            <p>El presente documento detalla la formulación matemática y computacional orientada a la ciencia de datos y
+                la inteligencia artificial, enfocada en la robustez numérica ante matrices de covarianza mal
+                condicionadas.</p>
+            <p>La precisión en los sistemas de cálculo digital resulta vital para evitar la propagación descontrolada de
+                errores de redondeo en carteras de inversión de alta dimensión.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Sección 2: Fundamentos de Estabilidad Numérica</h2>
+            <p>Las operaciones matriciales iterativas como Jacobi, Gauss-Seidel y el descenso del gradiente requieren un
+                análisis detallado del número de condición para garantizar convergencia estable en los plazos esperados.
+            </p>
+            <p>Mediante la incorporación de precondicionadores efectivos, es posible mitigar el impacto negativo de la
+                alta correlación entre activos financieros regionales.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Sección 3: Entorno y Pruebas Experimentales</h2>
+            <p>A través de simulaciones en escenarios de estabilidad, estrés financiero y mal condicionamiento, se
+                comprueba empíricamente el comportamiento de los algoritmos de optimización cuadrática planteados.</p>
+            <p>Continúa desplazándote para verificar que el encabezado mantiene la transición fluida de opacidad y
+                desenfoque.</p>
+        </div>
+    </main>
+
+    <!-- Scripts JS Externos -->
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

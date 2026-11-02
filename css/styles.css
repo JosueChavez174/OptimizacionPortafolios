@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0b0d12;
+  color: #e2e8f0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+padding-top: 0;
+}
+
+/* Header Fijo Más Largo con Transición Dinámica */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 95px;
+  z-index: 1000;
+  background-color: rgba(11, 13, 18, 0.4);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-bottom: 1px solid transparent;
+  padding: 0 20rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease, -webkit-backdrop-filter 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Estado al hacer scroll controlado por app.js */
+header.header-scrolled {
+  background-color: rgba(11, 13, 18, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom-color: #2a3143;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Estilo para Logo de Imagen */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.header-logo img {
+  height: 80px; /* Ajusta la altura de tu imagen de logo */
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 0.87rem; /* Tamaño amplio para resaltar el trazo cursivo */
+    color: transparent;
+  -webkit-text-stroke: 1px #00b4d8;
+  display: inline-block;
+}
+
+.logo-subtitle {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-family: 'Inter', sans-serif;
+  
+  letter-spacing: 0.12em;
+  margin-top: 2px;
+}
+
+/* Navegación del Header */
+.header-nav {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.header-nav a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.header-nav a:hover,
+.header-nav a.active {
+  color: #00b4d8;
+}
+
+/* Contenido Principal y Secciones Largas */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.welcome-box {
+  background-color: #12151e;
+  border: 1px solid #2a3143;
+  padding: 3rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 3rem 0 1rem 0;
+  border-bottom: 1px solid #2a3143;
+  padding-bottom: 0.5rem;
+}
+
+p {
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+/* Carrusel a pantalla casi completa con transición suave */
+.hero-carousel-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa el 82% de la altura de la pantalla */
+  min-height: 550px;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #2a3143;
+}
+
+.carousel, .carousel-inner, .carousel-item {
+  height: 100%;
+}
+
+/* Transición fluida de desvanecimiento (fade) mejorada */
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform: scale(1.02);
+  transition: transform 1.2s ease;
+}
+
+.carousel-item.active .carousel-img-bg {
+  transform: scale(1); /* Efecto de zoom sutil al cambiar de slide */
+}
+
+.carousel-caption {
+  z-index: 2;
+  bottom: 0 !important;
+  top: 0 !important;
+  padding: 0 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+
+.carousel-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.carousel-title .highlight-text {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #00b4d8;
+}
+
+.carousel-desc {
+  font-size: 1.15rem;
+  color: #94a3b8;
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/* Botones de acción */
+.carousel-btn-group {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-custom-outline {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.75rem 1.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-custom-outline:hover {
+  border-color: #00b4d8;
+  color: #00b4d8;
+  background: rgba(0, 180, 216, 0.08);
+}
+
+.btn-custom-solid {
+  background: #00b4d8;
+  color: #0b0d12;
+  border: 1px solid #00b4d8;
+  padding: 0.75rem 1.8rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-custom-solid:hover {
+  background: #0096b4;
+  color: #ffffff;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 7%;
+  z-index: 3;
+}
